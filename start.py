@@ -99,7 +99,19 @@ class AlienInvasion:
             self._fire_bullet()
         elif event.key == pygame.K_p:
             self.stats.game_active = True
-            
+        elif event.key == pygame.K_1:
+            if self.stats.game_active == False:
+                self.settings.alien_speed = 1.0
+                self.settings.alien_points = 50
+        elif event.key == pygame.K_2:
+            if self.stats.game_active == False:
+                self.settings.alien_speed = 2.5
+                self.settings.alien_points = 100
+        elif event.key == pygame.K_3:
+            if self.stats.game_active == False:
+                self.settings.alien_speed = 3.5
+                self.settings.alien_points = 200
+
     def _check_keyup_events(self, event):
         if event.key == pygame.K_RIGHT:
             self.ship.moving_right = False
