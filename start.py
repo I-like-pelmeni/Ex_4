@@ -101,16 +101,19 @@ class AlienInvasion:
             self.stats.game_active = True
         elif event.key == pygame.K_1:
             if self.stats.game_active == False:
-                self.settings.alien_speed = 1.0
+                self.settings.alien_speed = 0.75
                 self.settings.alien_points = 50
+                self.settings.bullets_allowed = 35
         elif event.key == pygame.K_2:
             if self.stats.game_active == False:
-                self.settings.alien_speed = 2.5
+                self.settings.alien_speed = 1.8
                 self.settings.alien_points = 100
+                self.settings.bullets_allowed = 20
         elif event.key == pygame.K_3:
             if self.stats.game_active == False:
-                self.settings.alien_speed = 3.5
+                self.settings.alien_speed = 2.5
                 self.settings.alien_points = 200
+                self.settings.bullets_allowed = 10
 
     def _check_keyup_events(self, event):
         if event.key == pygame.K_RIGHT:
